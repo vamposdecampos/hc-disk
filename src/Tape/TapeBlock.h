@@ -38,7 +38,7 @@ public:
 		word Param2;
 	} TapeBlockHeaderBasic;			
 
-	static const char* CTapeBlock::TapBlockTypeNames [CTapeBlock::TAP_BLOCK_TYPE_COUNT];
+	static const char* TapBlockTypeNames [CTapeBlock::TAP_BLOCK_TYPE_COUNT];
 
 	//Length in T-states of each pulse type
 	typedef struct  
