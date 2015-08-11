@@ -56,6 +56,8 @@
 
 
 #ifndef _WIN32
+#include <linux/limits.h>
+
 /* TODO: patch call sites instead */
 static inline char getch(void)
 {
@@ -66,6 +68,7 @@ static inline char getch(void)
 }
 
 #define stricmp strcasecmp
+#define MAX_PATH PATH_MAX
 #endif
 
 using namespace std;
