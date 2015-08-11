@@ -9,8 +9,8 @@
 #include "types.h"
 #include "CFileArchive.h"
 #include "CFileSpectrum.h"
-#include "Tape\tap.h"
-#include "Tape\TZX.h"
+#include "Tape/tap.h"
+#include "Tape/TZX.h"
 
 class CFileSpectrumTape;
 
