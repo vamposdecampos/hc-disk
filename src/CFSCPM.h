@@ -71,7 +71,7 @@ public:
 
 
 	CFSCPM(CDiskBase * disk, FSParamsType fsParams, CPMParams cpmParams, char* name = NULL);
-	virtual CFSCPM::~CFSCPM();
+	virtual ~CFSCPM();
 
 	virtual bool Init() { return ReadDirectory(); }
 
@@ -126,7 +126,7 @@ protected:
 	virtual bool CreateFSName(CFile* file, char* fNameOut);
 	static int FileDirEntSorter(word dirEnt1, word dirEnt2);
 	virtual bool OpenFile(CFile* file);
-	virtual bool CFSCPM::CloseFile(CFile* file);
+	virtual bool CloseFile(CFile* file);
 };
 
 #endif//_CPMFS_H_
