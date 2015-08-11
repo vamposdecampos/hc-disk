@@ -9,6 +9,9 @@ sources = [
 	'CFile.cpp',
 	'CFileTRD.cpp',
 	'CFilePlus3.cpp',
+	'CFileSystem.cpp',
+	'CFileArchive.cpp',
+	'DiskBase.cpp',
 ]
 
 env.Program('bin/hcdisk2', [
