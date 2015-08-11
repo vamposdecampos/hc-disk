@@ -57,6 +57,17 @@
 #endif
 
 
+#ifndef _WIN32
+/* TODO: patch call sites instead */
+static inline char getch(void)
+{
+	char buf[16] = "";
+
+	fgets(buf, sizeof(buf), stdin);
+	return *buf;
+}
+#endif
+
 using namespace std;
 
 CDiskBase* theDisk = NULL;
