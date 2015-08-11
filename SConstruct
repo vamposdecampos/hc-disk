@@ -4,6 +4,8 @@ env = Environment(
 )
 
 sources = [
+	'main.cpp',
+
 	'CFileSpectrum.cpp',
 	'CFileHC.cpp',
 	'CFileCPM.cpp',
@@ -33,7 +35,6 @@ sources = [
 	'Tape/TZX.cpp',
 
 	'FileConverters/BasicDecoder.cpp',
-	'FileConverters/scr2gif.c',
 	'FileConverters/dz80/dissz80.c',
 	'FileConverters/dz80/loadfile.c',
 	'FileConverters/dz80/noscript.c',
@@ -42,6 +43,4 @@ sources = [
 
 env.Program('bin/hcdisk2', [
 	'src/%s' % src for src in sources
-] + [
-	'nop.cpp',
 ])
