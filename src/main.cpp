@@ -4,7 +4,6 @@
 
 #include <memory.h>
 #include <string.h>
-#include <conio.h>
 
 #include <list>
 #include <vector>
@@ -14,14 +13,19 @@
 #include <iomanip>
 #include <fstream>
 
+#ifdef _WIN32
+#include <conio.h>
 #include <Windows.h>
 #include <WinCon.h>
+#endif
 
 #include "dsk.h"
 #include "edsk.h"
-#include "cfscpm.h"
+#include "CFSCPM.h"
 #include "DiskImgRaw.h"
+#ifdef _WIN32
 #include "DiskWin32.h"
+#endif
 #include "DiskImgCQM.h"
 #include "CFilePlus3.h"
 #include "CFileHC.h"
@@ -38,7 +42,9 @@
 #include "FileConverters/dz80/dissz80.h"
 #include "CFileArchive.h"
 #include "CFileArchiveTape.h"
-#include "Tape\Tape2Wave.h"
+#ifdef _WIN32
+#include "Tape/Tape2Wave.h"
+#endif
 
 #ifdef _MSC_VER
 #ifdef _DEBUG
