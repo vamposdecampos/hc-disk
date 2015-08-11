@@ -781,6 +781,7 @@ void GetWindowSize( int& lines, int& columns )
 
 void PrintIntense(char* str)
 {
+#ifdef _WIN32
 	CONSOLE_SCREEN_BUFFER_INFO csbi;
 	HANDLE hCMD = GetStdHandle( STD_OUTPUT_HANDLE );
 
@@ -792,6 +793,9 @@ void PrintIntense(char* str)
 		
 		SetConsoleTextAttribute(hCMD, csbi.wAttributes);
 	}
+#else
+	printf("\033[1m%s\033[0m", str);
+#endif
 }
 
 void TextViewer(string str)
