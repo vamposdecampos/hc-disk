@@ -14,6 +14,7 @@ sources = [
 	'CFileArchiveTape.cpp',
 	'DiskBase.cpp',
 	'DiskImgRaw.cpp',
+	'DiskImgCQM.cpp',
 	'edsk.cpp',
 	'dsk.cpp',
 	'CFSOpus.cpp',
@@ -21,6 +22,9 @@ sources = [
 	'CFSCPM.cpp',
 	'CFSTRDSCL.cpp',
 	'CFSCPMPlus3.cpp',
+	'CFSCobraDEVIL.cpp',
+	'CFSMGT.cpp',
+	'CFSTRD.cpp',
 
 	'Tape/tap.cpp',
 	'Tape/TapeBlock.cpp',
