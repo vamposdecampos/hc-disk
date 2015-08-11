@@ -37,6 +37,7 @@
 #include "CFSMGT.h"
 #include "FileConverters/BasicDecoder.h"
 #include "FileConverters/scr2gif.c"
+#include "FileConverters/dz80/types.h"
 #include "FileConverters/dz80/dissz80.h"
 #include "CFileArchive.h"
 #include "CFileArchiveTape.h"
