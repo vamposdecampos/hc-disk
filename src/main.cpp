@@ -1338,7 +1338,7 @@ bool Open(int argc, char* argv[])
 		return false;
 }
 
-word log2(word x)
+word wlog2(word x)
 {
 	word log2 = 0;
 
@@ -1372,17 +1372,17 @@ bool Stat(int argc, char* argv[])
 	printf("File system features: ");
 	vector<string> vFt;
 	if (feat & CFileSystem::FSFT_ZXSPECTRUM_FILES)
-		vFt.push_back(CFileSystem::FSFeatureNames[log2(CFileSystem::FSFT_ZXSPECTRUM_FILES)]);
+		vFt.push_back(CFileSystem::FSFeatureNames[wlog2(CFileSystem::FSFT_ZXSPECTRUM_FILES)]);
 	if (feat & CFileSystem::FSFT_LABEL)
-		vFt.push_back(CFileSystem::FSFeatureNames[log2(CFileSystem::FSFT_LABEL)]);
+		vFt.push_back(CFileSystem::FSFeatureNames[wlog2(CFileSystem::FSFT_LABEL)]);
 	if (feat & CFileSystem::FSFT_FILE_ATTRIBUTES)
-		vFt.push_back(CFileSystem::FSFeatureNames[log2(CFileSystem::FSFT_FILE_ATTRIBUTES)]);
+		vFt.push_back(CFileSystem::FSFeatureNames[wlog2(CFileSystem::FSFT_FILE_ATTRIBUTES)]);
 	if (feat & CFileSystem::FSFT_FOLDERS)
-		vFt.push_back(CFileSystem::FSFeatureNames[log2(CFileSystem::FSFT_FOLDERS)]);
+		vFt.push_back(CFileSystem::FSFeatureNames[wlog2(CFileSystem::FSFT_FOLDERS)]);
 	if (feat & CFileSystem::FSFT_TIMESTAMPS)
-		vFt.push_back(CFileSystem::FSFeatureNames[log2(CFileSystem::FSFT_TIMESTAMPS)]);
+		vFt.push_back(CFileSystem::FSFeatureNames[wlog2(CFileSystem::FSFT_TIMESTAMPS)]);
 	if (feat & CFileSystem::FSFT_CASE_SENSITIVE_FILENAMES)
-		vFt.push_back(CFileSystem::FSFeatureNames[log2(CFileSystem::FSFT_CASE_SENSITIVE_FILENAMES)]);
+		vFt.push_back(CFileSystem::FSFeatureNames[wlog2(CFileSystem::FSFT_CASE_SENSITIVE_FILENAMES)]);
 	for (byte ftIdx = 0; ftIdx < vFt.size(); ftIdx++)
 		printf("%s, ", vFt[ftIdx].c_str());		
 	
