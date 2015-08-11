@@ -1,5 +1,6 @@
 env = Environment(
 	CCFLAGS = ['-Wall', '-g'],
+	CPPDEFINES = ['_DZ80_EXCLUDE_SCRIPT'],
 )
 
 sources = [
@@ -29,6 +30,13 @@ sources = [
 	'Tape/tap.cpp',
 	'Tape/TapeBlock.cpp',
 	'Tape/TZX.cpp',
+
+	'FileConverters/BasicDecoder.cpp',
+	'FileConverters/scr2gif.c',
+	'FileConverters/dz80/dissz80.c',
+	'FileConverters/dz80/loadfile.c',
+	'FileConverters/dz80/noscript.c',
+	'FileConverters/dz80/tables.c',
 ]
 
 env.Program('bin/hcdisk2', [
