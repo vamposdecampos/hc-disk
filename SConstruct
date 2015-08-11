@@ -11,11 +11,20 @@ sources = [
 	'CFilePlus3.cpp',
 	'CFileSystem.cpp',
 	'CFileArchive.cpp',
+	'CFileArchiveTape.cpp',
 	'DiskBase.cpp',
 	'DiskImgRaw.cpp',
 	'edsk.cpp',
 	'dsk.cpp',
 	'CFSOpus.cpp',
+	'CFSCPMHC.cpp',
+	'CFSCPM.cpp',
+	'CFSTRDSCL.cpp',
+	'CFSCPMPlus3.cpp',
+
+	'Tape/tap.cpp',
+	'Tape/TapeBlock.cpp',
+	'Tape/TZX.cpp',
 ]
 
 env.Program('bin/hcdisk2', [
