@@ -3,6 +3,7 @@ env = Environment(
 )
 
 sources = [
+	'CFileSpectrum.cpp',
 ]
 
 env.Program('bin/hcdisk2', [
