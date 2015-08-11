@@ -63,7 +63,7 @@ protected:
 
 public:
 	CTapFile();	
-	~CTapFile();
+	virtual ~CTapFile();
 
 	virtual bool Open(char * fileName, TapeOpenMode mode = TAP_OPEN_EXISTING);
 	virtual bool Close();
