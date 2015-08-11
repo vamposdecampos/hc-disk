@@ -154,12 +154,20 @@ string GetExtension(string fileName)
 
 bool Confirm(char* msg)
 {
+#ifdef _WIN32
 	printf("%s Press [ENTER] to confirm, [ESC] to cancel.\n", msg);
 	char c = getch();
 	while (c != 27 && c != 13)
 		c = getch();
 
 	return c == 13;
+#else
+	char buf[16], *p;
+
+	printf("%s Enter 'yes' to continue, anything else to cancel.\n", msg);
+	p = fgets(buf, sizeof(buf), stdin);
+	return p && strcmp(p, "yes");
+#endif
 }
 
 typedef enum
