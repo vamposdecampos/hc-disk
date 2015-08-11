@@ -16,6 +16,7 @@ sources = [
 	'DiskBase.cpp',
 	'DiskImgRaw.cpp',
 	'DiskImgCQM.cpp',
+	'DiskWin32Stub.cpp',
 	'edsk.cpp',
 	'dsk.cpp',
 	'CFSOpus.cpp',

@@ -1,14 +1,17 @@
 #ifndef _CWIN32DISK_H_
 #define _CWIN32DISK_H_
 
+#ifdef _WIN32
 #include <Windows.h>
-
 #include "fdrawcmd.h"
+#endif
+
 #include "types.h"
 #include "DiskBase.h"
 
 class CDiskWin32: public CDiskBase
 {
+#ifdef _WIN32
 private:		
 	bool CmdRead (HANDLE h_, BYTE cyl_, BYTE head_, BYTE start_, BYTE count_, BYTE size_, PVOID pv_);
 	bool CmdWrite (HANDLE h_, BYTE cyl_, BYTE head_, BYTE start_, BYTE count_, BYTE size_, PVOID pv_);
@@ -17,12 +20,13 @@ private:
 	bool SetDataRate (HANDLE h_, BYTE bDataRate_);
 	bool ResetDrive();
 	HANDLE OpenDrive(int drive);
+#endif
 
 public:
 	CDiskWin32(CDiskBase::DiskDescType diskDesc);
 	CDiskWin32();
 	~CDiskWin32();
-	static DWORD GetDriverVersion();
+	static dword GetDriverVersion();
 	bool Open(char* drive, DiskOpenMode mode = OPEN_MODE_EXISTING);
 	bool ReadSectors(byte *buf,byte track,byte head,byte sect,byte sectNO);
 	bool WriteSectors(byte track, byte side, byte sector, byte sectCnt, byte * buff);
