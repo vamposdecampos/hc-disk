@@ -23,9 +23,7 @@
 #include "edsk.h"
 #include "CFSCPM.h"
 #include "DiskImgRaw.h"
-#ifdef _WIN32
 #include "DiskWin32.h"
-#endif
 #include "DiskImgCQM.h"
 #include "CFilePlus3.h"
 #include "CFileHC.h"
