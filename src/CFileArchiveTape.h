@@ -65,7 +65,7 @@ public:
 	{
 	}
 
-	~CFileSpectrumTape()
+	virtual ~CFileSpectrumTape()
 	{
 		if (this->buffer != NULL)
 		{
