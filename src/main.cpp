@@ -66,6 +66,8 @@ static inline char getch(void)
 	fgets(buf, sizeof(buf), stdin);
 	return *buf;
 }
+
+#define stricmp strcasecmp
 #endif
 
 using namespace std;
