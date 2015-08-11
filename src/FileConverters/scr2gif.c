@@ -161,7 +161,7 @@ static word   _RelPixY;
 /**********************************************************************************************************************************/
 
 static byte   _Create                       (char *FileName);
-static byte   _Write                        (void *Buf, word Length);
+static byte   _Write                        (const void *Buf, word Length);
 static byte   _WriteByte                    (byte B);
 static byte   _WriteWord                    (word W);
 static void   _Close                        (void);
@@ -210,7 +210,7 @@ static byte _Create (char *FileName)
   return (((_OutFile = fopen (FileName, "wb")) == NULL) ? GIF_ERRCREATE : GIF_OK);
 }
 
-static byte _Write (void *Buf, word Length)
+static byte _Write (const void *Buf, word Length)
 
 /**********************************************************************************************************************************/
 /* Pre   : `Buf' points to the buffer to be written, `Length' holds the length.                                                   */
