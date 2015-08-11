@@ -45,6 +45,7 @@
 #ifdef _WIN32
 #include "Tape/Tape2Wave.h"
 #endif
+#include "stringutils.h"
 
 #ifdef _MSC_VER
 #ifdef _DEBUG
