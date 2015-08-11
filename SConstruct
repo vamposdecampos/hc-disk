@@ -12,6 +12,10 @@ sources = [
 	'CFileSystem.cpp',
 	'CFileArchive.cpp',
 	'DiskBase.cpp',
+	'DiskImgRaw.cpp',
+	'edsk.cpp',
+	'dsk.cpp',
+	'CFSOpus.cpp',
 ]
 
 env.Program('bin/hcdisk2', [
