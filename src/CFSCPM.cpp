@@ -4,6 +4,7 @@
 #include <string>
 #include "CFSCPM.h"
 #include "CFileSystem.h"
+#include "stringutils.h"
 
 #include <bitset>
 #include <vector>
