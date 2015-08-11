@@ -761,6 +761,7 @@ string Disassemble(byte* buf, word len, word addr = 0)
 
 void GetWindowSize( int& lines, int& columns )
 {
+#ifdef _WIN32
 	CONSOLE_SCREEN_BUFFER_INFO csbi;
 	if (GetConsoleScreenBufferInfo(
 		GetStdHandle( STD_OUTPUT_HANDLE ),
@@ -772,6 +773,10 @@ void GetWindowSize( int& lines, int& columns )
 	}
 	else 
 		lines = columns = 0;
+#else
+	lines = atoi(getenv("LINES") ?: "0");
+	columns = atoi(getenv("COLUMNS") ?: "0");
+#endif
 }
 
 void PrintIntense(char* str)
