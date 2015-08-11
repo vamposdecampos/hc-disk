@@ -1,5 +1,6 @@
 #include "CFileArchiveTape.h"
 #include "CFileSpectrum.h"
+#include "stringutils.h"
 
 #ifdef _MSC_VER
 #ifdef _DEBUG
