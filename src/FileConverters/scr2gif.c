@@ -21,7 +21,7 @@
 #include <string.h>
 #include <malloc.h>
 //#include <errno.h>
-//#include <unistd.h>
+#include <unistd.h>
 #include "../types.h"
 
 #include <memory.h>
