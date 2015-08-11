@@ -18,7 +18,7 @@ public:
 	CFile();
 	CFile(const CFile& src);
 	CFile(char* name, dword length, const byte* buffer);
-	~CFile();
+	virtual ~CFile();
 
 	virtual bool operator== (const CFile&);
 	virtual bool operator!= (const CFile& src) { return !(this->operator==(src));};
