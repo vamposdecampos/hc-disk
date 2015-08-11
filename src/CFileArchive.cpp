@@ -1,5 +1,6 @@
 #include "CFileArchive.h"
 #include "stringutils.h"
+#include <stdio.h>
 
 
 const char* CFileArchive::ERROR_TYPE_MSG[] = 
