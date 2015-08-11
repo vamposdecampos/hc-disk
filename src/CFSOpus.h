@@ -63,7 +63,7 @@ class CFileOpus: public CFileSpectrum, public CFile
 	friend class CFSOpus;
 
 public:
-	~CFileOpus()
+	virtual ~CFileOpus()
 	{
 		if (buffer != NULL && isOpened)
 		{
