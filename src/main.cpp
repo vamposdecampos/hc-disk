@@ -1586,6 +1586,8 @@ bool PrintHelp(int argc, char* argv[]);
 
 void Tap2Wav(CTapFile* theTap, bool realTime = true)
 {				
+/* TODO: fix Wave.h and re-enable */
+#ifdef _WIN32
 	CTape2Wav tape2wav;
 	CTZXFile* tzx = (CTZXFile*)theTap;
 	CTZXFile::TZXBlkArhiveInfo* blkArh;
@@ -1813,6 +1815,7 @@ ExitLoop:
 				printf("The length is: %02d:%02d.\n", sec/60, sec%60);
 			}
 	}		
+#endif
 }
 
 bool PlayTape(int argc, char* argv[])
