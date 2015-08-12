@@ -1,5 +1,12 @@
 Import('env')
 
+conf = env.Configure()
+ok = conf.CheckCC() and conf.CheckCXX()
+conf.Finish()
+
+if not ok:
+	Return()
+
 sources = [
 	'main.cpp',
 
