@@ -70,6 +70,9 @@ static inline char getch(void)
 
 #define stricmp strcasecmp
 #define MAX_PATH PATH_MAX
+#define IMAGE_VIEWER "run-mailcap "
+#else
+#define IMAGE_VIEWER
 #endif
 
 using namespace std;
@@ -895,7 +898,7 @@ bool TypeFile(int argc, char* argv[])
 				cout << "Displaing SCREEN$ file '" << fnGIF << "'" << endl;
 
 				stringstream quotedFName;
-				quotedFName << "\"" << fnGIF.c_str() << "\"";
+				quotedFName << IMAGE_VIEWER "\"" << fnGIF.c_str() << "\"";
 				system(quotedFName.str().c_str());
 				remove(fnGIF.c_str());
 			}
