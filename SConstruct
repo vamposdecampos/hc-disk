@@ -14,6 +14,12 @@ envs = [
 		CXX='${cross}g++',
 		LD='${cross}g++',
 		PROGSUFFIX='.exe',
+		LINKFLAGS=[
+			'-static-libgcc',
+			'-static-libstdc++',
+			'-static',
+			'-pthread',
+		],
 	),
 ]
 
