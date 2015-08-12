@@ -5,9 +5,9 @@
 #ifndef _WAVE_H_
 #define _WAVE_H_
 
-#include <Windows.h>
-#include <Mmsystem.h>
-#include <Mmreg.h.>
+#include <windows.h>
+#include <mmsystem.h>
+#include <mmreg.h>
 #include "types.h"
 
 //Includes functionality for reading & writing WAV files.

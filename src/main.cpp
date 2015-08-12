@@ -15,8 +15,8 @@
 
 #ifdef _WIN32
 #include <conio.h>
-#include <Windows.h>
-#include <WinCon.h>
+#include <windows.h>
+#include <wincon.h>
 #endif
 
 #include "dsk.h"

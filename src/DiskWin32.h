@@ -2,7 +2,7 @@
 #define _CWIN32DISK_H_
 
 #ifdef _WIN32
-#include <Windows.h>
+#include <windows.h>
 #include "fdrawcmd.h"
 #endif
 
