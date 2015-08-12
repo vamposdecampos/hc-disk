@@ -11,12 +11,15 @@
 #endif
 #endif
 
+#ifdef _WIN32
+#define strcasestr strstr
+#endif
 
 bool CFileArchiveTape::Init()
 {	
-	if (strstr(Name, ".TAP"))
+	if (strcasestr(Name, ".TAP"))
 		theTap = new CTapFile();	
-	else if (strstr(Name, ".TZX"))
+	else if (strcasestr(Name, ".TZX"))
 		theTap = new CTZXFile();	
 
 	bool res = theTap->Open(Name);
